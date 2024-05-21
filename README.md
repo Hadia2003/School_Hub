@@ -1,0 +1,1 @@
+Providing a centralized platform to all schools is a useful and important task that will make searching for schools easier, keeps schools connected, keep everyone updated about latest changes in school systems.
