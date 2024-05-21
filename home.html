@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Hub</title>
+    <style>
+      .container {
+        background-color: #fff;
+        display: flex;
+        max-width: 480px;
+        width: 100%;
+        flex-direction: column;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: -0.96px;
+        margin: 0 auto;
+      }
+      .header {
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        font-size: 17px;
+        color: #000;
+        font-weight: 600;
+        white-space: nowrap;
+        letter-spacing: -0.68px;
+        padding: 0 12px;
+      }
+      .time {
+        font-family: 'SF Pro Text', sans-serif;
+        justify-content: center;
+        flex: 1;
+        padding: 16px 22px 8px;
+      }
+      .logo {
+        aspect-ratio: 1.79;
+        object-fit: auto;
+        object-position: center;
+        width: 100%;
+        flex: 1;
+      }
+      .welcome-title {
+        color: #186e9f;
+        letter-spacing: -1.28px;
+        align-self: start;
+        margin: 57px 0 0 16px;
+        font: 700 32px 'Inter', sans-serif;
+      }
+      .subtitle {
+        color: #2d1c1c;
+        letter-spacing: -0.56px;
+        align-self: start;
+        margin: 8px 0 0 16px;
+        font: 400 14px 'Inter', sans-serif;
+      }
+      .school-section {
+        border-radius: 20px;
+        background-color: rgba(125, 178, 208, 1);
+        align-self: center;
+        display: flex;
+        margin-top: 30px;
+        width: 358px;
+        max-width: 100%;
+        align-items: flex-start;
+        gap: 20px;
+        color: #fff;
+        white-space: nowrap;
+        justify-content: space-between;
+        padding: 27px 0 0 19px;
+      }
+      .school-title {
+        font-family: 'Urbanist', sans-serif;
+        align-self: end;
+        margin-top: 82px;
+      }
+      .school-image {
+        aspect-ratio: 1.56;
+        object-fit: auto;
+        object-position: center;
+        width: 216px;
+        align-self: start;
+        z-index: 10;
+        max-width: 100%;
+      }
+      .profile-section {
+        border-radius: 20px;
+        background-color: rgba(24, 159, 126, 1);
+        align-self: center;
+        display: flex;
+        margin-top: 37px;
+        width: 351px;
+        max-width: 100%;
+        gap: 20px;
+        color: #fff;
+        white-space: nowrap;
+        justify-content: space-between;
+        padding: 14px 48px 14px 17px;
+      }
+      .profile-title {
+        font-family: 'Urbanist', sans-serif;
+        align-self: end;
+        margin-top: 107px;
+      }
+      .profile-image {
+        aspect-ratio: 1;
+        object-fit: auto;
+        object-position: center;
+        width: 131px;
+        max-width: 100%;
+      }
+      .communication-section {
+        border-radius: 20px;
+        background-color: rgba(209, 225, 235, 1);
+        align-self: start;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        color: #404040;
+        white-space: nowrap;
+        justify-content: space-between;
+        margin: 34px 0 0 16px;
+        padding: 39px 24px 17px;
+      }
+      .communication-title {
+        font-family: 'Urbanist', sans-serif;
+        align-self: end;
+        margin-top: 73px;
+      }
+      .communication-image {
+        aspect-ratio: 1.59;
+        object-fit: auto;
+        object-position: center;
+        width: 131px;
+        align-self: start;
+        max-width: 100%;
+      }
+      .main-footer {
+          justify-content: center;
+          display: flex;
+          margin-top: 114px;
+          width: 100%;
+          flex-direction: column;
+          font-size: 10px;
+          color: #a9abad;
+          white-space: nowrap;
+          letter-spacing: -0.4px;
+        }
+        .footer {
+          justify-content: center;
+          border-radius: 20px 20px 0 0;
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+          background-color: #fff;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          padding: 15px 27px;
+        }
+        .footer-nav {
+          justify-content: center;
+          display: flex;
+          gap: 20px;
+          padding: 0 2px;
+        }
+        .nav-item {
+          display: flex;
+          flex-direction: column;
+        }
+        .nav-icon {
+          aspect-ratio: 1.12;
+          object-fit: auto;
+          object-position: center;
+          width: 27px;
+          align-self: center;
+        }
+        .nav-title {
+          font-family: "Inter", sans-serif;
+          margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="time">9:41</div>
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4bc1ee3a0b01921d9d835b124fc4a1844228c93549bd97268753a1079e8d13b1?apiKey=262c14b244ca4432a41d9d430d7880df&" alt="Logo" class="logo"/>
+    </div>
+    <h1 class="welcome-title">Welcome Khaula!</h1>
+    <p class="subtitle">Explore School Hub</p>
+    <section class="school-section">
+      <div>
+        <a href="search.html">
+          <h2 class="school-title">School</h2>
+        </a>
+      </div>
+      <a href="search.html">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d23204a741565b39acdc70ec9953fe4379a54d6bf887d53d54f26807d9f0ffa1?apiKey=262c14b244ca4432a41d9d430d7880df&" alt="School Image" class="school-image"/>
+      </a>
+    </section>
+    <section class="profile-section">
+      <div>
+        <h2 class="profile-title">Profile</h2>
+      </div>
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c106ddf0014a71bf506847d9b8172680208ffb48ca555b06417305e6a1fad7c4?apiKey=262c14b244ca4432a41d9d430d7880df&" alt="Profile Image" class="profile-image"/>
+    </section>
+    <section class="communication-section">
+      <div>
+        <h2 class="communication-title">Communication</h2>
+      </div>
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c94b0e59f8a3e2ecfe07b779b183dbdb12ec7336b24160fe9390c0736965174d?apiKey=262c14b244ca4432a41d9d430d7880df&" alt="Communication Image" class="communication-image"/>
+    </section>
+  </div>
+<section> 
+  <footer class="main-footer">
+    <nav class="footer">
+      <div class="footer-nav">
+        <div class="nav-item">
+          <a href="home.html">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1812a7a67fdb8599f6e5985af5b8da2b143251b6e0030116a3ccd59b16fc700f?apiKey=262c14b244ca4432a41d9d430d7880df&" class="nav-icon" alt="Home icon" />
+            <span class="nav-title">Home</span>
+          </a>
+        </div>
+        <div class="nav-item">
+          <a href="search.html">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b96bcaf827af12f30606e9dfb33fdc641d5eda5b4e1e980fafaa9760e9bf130b?apiKey=262c14b244ca4432a41d9d430d7880df&" class="nav-icon" alt="Search icon" />
+            <span class="nav-title">Search</span>
+          </a>
+        </div>
+        <div class="nav-item">
+          <a href="notification.html">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f347ef705a2548c75fe83c8cfb6964d8228914c78a5329f9549c2a96c638b846?apiKey=262c14b244ca4432a41d9d430d7880df&" class="nav-icon" alt="Notification icon" />
+            <span class="nav-title">Notification</span>
+          </a>
+        </div>
+        <div class="nav-item">
+          <a href="profile.html">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9bc14101b5fa4d1d2d9943fe08a1a818927d5bae5085f3f23f4aa507b9dbc147?apiKey=262c14b244ca4432a41d9d430d7880df&" class="nav-icon" alt="Profile icon" />
+            <span class="nav-title">Profile</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </footer>
+</section> 
+</body>
+</html>

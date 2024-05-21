@@ -1,0 +1,246 @@
+<style>
+    .container {
+      background-color: #fff;
+      display: flex;
+      max-width: 480px;
+      width: 100%;
+      padding-bottom: 80px;
+      flex-direction: column;
+      margin: 0 auto;
+    }
+  
+    .header {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      gap: 20px;
+      font-size: 17px;
+      color: #000;
+      font-weight: 600;
+      white-space: nowrap;
+      letter-spacing: -0.68px;
+      padding: 0 12px;
+    }
+  
+    .time {
+      font-family: SF Pro Text, sans-serif;
+      justify-content: center;
+      flex: 1;
+      padding: 16px 22px 8px;
+    }
+  
+    .header img {
+      aspect-ratio: 1.79;
+      object-fit: auto;
+      object-position: center;
+      width: 100%;
+      flex: 1;
+    }
+  
+    .main {
+      display: flex;
+      margin-top: 26px;
+      width: 100%;
+      flex-direction: column;
+      padding: 0 15px;
+    }
+  
+    .balance-section {
+      display: flex;
+      justify-content: center;
+      width: 359px;
+      max-width: 100%;
+      padding-right: 80px;
+      gap: 20px;
+    }
+  
+    .balance-section img {
+      aspect-ratio: 0.6;
+      object-fit: auto;
+      object-position: center;
+      width: 12px;
+      fill: #062d43;
+    }
+  
+    .balance-indicator {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto 0;
+    }
+  
+    .balance-bar {
+      border-radius: 20px;
+      background-color: #e0dff1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .filled-bar {
+      border-radius: 20px;
+      background-color: #186e9f;
+      height: 12px;
+    }
+  
+    .title {
+      color: #186e9f;
+      margin-top: 77px;
+      font: 700 32px Inter, sans-serif;
+    }
+  
+    .label {
+      color: #2d1c1c;
+      margin-top: 30px;
+      font: 500 14px Inter, sans-serif;
+    }
+  
+    .text-box {
+      border-radius: 10px;
+      border: 1px solid rgba(221, 218, 218, 1);
+      margin-top: 12px;
+      align-items: start;
+      color: #b6b1b2;
+      justify-content: center;
+      padding: 17px 20px;
+      font: 500 14px Inter, sans-serif;
+    }
+  
+    .phone-section {
+      color: #2d1c1c;
+      margin-top: 16px;
+      font: 500 14px Inter, sans-serif;
+    }
+  
+    .phone-box {
+      border-radius: 10px;
+      border: 1px solid rgba(221, 218, 218, 1);
+      display: flex;
+      margin-top: 12px;
+      gap: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+      justify-content: space-between;
+      padding: 17px 20px;
+    }
+  
+    .phone-code,
+    .phone-number {
+      font-family: Inter, sans-serif;
+    }
+  
+    .phone-code {
+      color: #000;
+    }
+  
+    .phone-number {
+      color: #b6b1b2;
+    }
+  
+    .password-section {
+      color: #2d1c1c;
+      margin-top: 16px;
+      font: 500 14px Inter, sans-serif;
+    }
+  
+    .password-box {
+      border-radius: 10px;
+      border: 1px solid rgba(221, 218, 218, 1);
+      display: flex;
+      margin-top: 12px;
+      flex-direction: column;
+      font-size: 14px;
+      color: #b6b1b2;
+      font-weight: 500;
+      justify-content: center;
+      padding: 13px 22px;
+    }
+  
+    .password-input {
+      justify-content: space-between;
+      display: flex;
+      gap: 12px;
+    }
+  
+    .password-input-text {
+      font-family: Inter, sans-serif;
+      margin: auto 0;
+    }
+  
+    .password-input img {
+      aspect-ratio: 1;
+      object-fit: auto;
+      object-position: center;
+      width: 24px;
+    }
+  
+    .login-button {
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background-color: #186e9f;
+      margin-top: 108px;
+      color: #fff;
+      white-space: nowrap;
+      padding: 16px;
+      font: 600 14px/143% Inter, sans-serif;
+    }
+  
+    .account-section {
+      color: #186e9f;
+      align-self: center;
+      margin-top: 36px;
+      font: 600 14px Inter, sans-serif;
+    }
+  
+    .sign-up-link {
+      color: rgba(24, 110, 159, 1);
+    }
+    a{
+    text-decoration: none;
+    font: 600 14px/143% Inter, sans-serif;
+    color: #fff;
+}
+  </style>
+  
+  <div class="container">
+    <header class="header">
+      <div class="time">9:41</div>
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/374588e55e5e54246e366e5845170c4c12f18aaf001782f80f64ec7b170bc7c4?apiKey=3198f21feb7041f1afab90cafa57c110&" alt="" />
+    </header>
+    <main class="main">
+      <section class="balance-section">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/eeab5084de91d12d9009cfa59ebd76bc48a8c83fa69ce1999456ae9720a5d1a0?apiKey=3198f21feb7041f1afab90cafa57c110&" alt="Balance icon" />
+        <div class="balance-indicator">
+          <div class="balance-bar">
+            <div class="filled-bar"></div>
+          </div>
+        </div>
+      </section>
+      <h1 class="title">Login</h1>
+      <form>
+        <label for="name" class="label">Name</label>
+        <input type="text" id="name" name="user_name" class="text-box" value="Hadia Najeeb" aria-label="Name: Hadia Najeeb" readonly />
+  
+        <label for="phone" class="phone-section">Phone no</label>
+        <div class="phone-box">
+          <span class="phone-code">+92</span>
+          <input type="tel" id="phone" name="user_phone" class="phone-number" value="3364851993" aria-label="Phone number: 3364851993" readonly />
+        </div>
+  
+        <label for="password" class="password-section">Password</label>
+        <div class="password-box">
+          <div class="password-input">
+            <input type="password" id="password" name="user_password" class="password-input-text" placeholder="Enter your password" aria-label="Enter your password" />
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/63dc66ec09429635ca52b24a3a343af8fbd6f2dcf25dee932528cc6b5951ebb6?apiKey=3198f21feb7041f1afab90cafa57c110&" alt="Password visibility toggle" />
+          </div>
+        </div>
+        <button class="login-button" type="submit"><a href="otp.html">Login</a></button>
+      </form>
+      <div class="account-section">
+        Already have an account?
+        <a href="#" class="sign-up-link">Sign up</a>
+      </div>
+    </main>
+  </div>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification</title>
+</head>
+<body>
+    <style>
+        .wrapper {
+          background-color: #fff;
+          display: flex;
+          max-width: 480px;
+          width: 100%;
+          flex-direction: column;
+          font-weight: 400;
+          margin: 0 auto;
+        }
+        .top-bar {
+          justify-content: center;
+          display: flex;
+          width: 100%;
+          gap: 20px;
+          font-size: 17px;
+          color: #000;
+          font-weight: 600;
+          white-space: nowrap;
+          letter-spacing: -0.68px;
+          padding: 0 12px;
+        }
+        .time-info {
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          padding: 16px 22px 8px;
+        }
+        .time-text {
+          font-family: "SF Pro Text", sans-serif;
+          justify-content: center;
+        }
+        .notification-header {
+          display: flex;
+          margin-top: 20px;
+          width: 100%;
+          flex-direction: column;
+          padding: 0 15px;
+        }
+        .notification-title-container {
+          display: flex;
+          gap: 20px;
+          font-size: 30px;
+          color: var(--black, #000);
+          font-weight: 600;
+          white-space: nowrap;
+          text-align: center;
+        }
+        .notification-icon {
+          aspect-ratio: 1;
+          object-fit: auto;
+          object-position: center;
+          width: 24px;
+        }
+        .notification-title {
+          font-family: "Inter", sans-serif;
+          flex-grow: 1;
+          flex-basis: auto;
+        }
+        .notification-card {
+          background-color: #fff;
+          display: flex;
+          margin-top: 44px;
+          flex-direction: column;
+          justify-content: center;
+          padding: 12px 16px;
+        }
+        .card-content {
+          display: flex;
+          flex-direction: column;
+        }
+        .card-header {
+          justify-content: center;
+          display: flex;
+          padding-right: 80px;
+          gap: 6px;
+          font-size: 12px;
+          line-height: 133%;
+        }
+        .app-icon {
+          aspect-ratio: 1;
+          object-fit: auto;
+          object-position: center;
+          width: 16px;
+        }
+        .app-name {
+          font-family: "Roboto", sans-serif;
+          color: var(--accent_color, #665beb);
+          justify-content: center;
+        }
+        .dot-icon {
+          aspect-ratio: 1;
+          object-fit: auto;
+          object-position: center;
+          width: 3px;
+          fill: var(--settings-first-title, #222);
+          margin: auto 0;
+        }
+        .time-label {
+          color: var(--settings-first-title, #222);
+          font-family: "Roboto", sans-serif;
+        }
+        .right-arrow {
+          aspect-ratio: 1.75;
+          object-fit: auto;
+          object-position: center;
+          width: 7px;
+          fill: var(--settings-first-title, #222);
+          margin: auto 0;
+        }
+        .card-body {
+          display: flex;
+          margin-top: 9px;
+          flex-direction: column;
+        }
+        .body-title {
+          font-feature-settings: "clig" off, "liga" off;
+          align-self: start;
+          color: var(--settings-first-title, #222);
+          justify-content: center;
+          font: 15px/133% "Roboto", sans-serif;
+        }
+        .body-text {
+          margin-top: 4px;
+          color: var(--secondary-color, #686868);
+          justify-content: center;
+          font: 13px/154% "Roboto", sans-serif;
+        }
+        .main-footer {
+          justify-content: center;
+          display: flex;
+          margin-top: 114px;
+          width: 100%;
+          flex-direction: column;
+          font-size: 10px;
+          color: #a9abad;
+          white-space: nowrap;
+          letter-spacing: -0.4px;
+        }
+        .footer {
+          justify-content: center;
+          border-radius: 20px 20px 0 0;
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+          background-color: #fff;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          padding: 15px 27px;
+        }
+        .footer-nav {
+          justify-content: center;
+          display: flex;
+          gap: 20px;
+          padding: 0 2px;
+        }
+        .nav-item {
+          display: flex;
+          flex-direction: column;
+        }
+        .nav-icon {
+          aspect-ratio: 1.12;
+          object-fit: auto;
+          object-position: center;
+          width: 27px;
+          align-self: center;
+        }
+        .nav-title {
+          font-family: "Inter", sans-serif;
+          margin-top: 4px;
+        }
+        </style>
+        
+        <section class="wrapper">
+          <header class="top-bar">
+            <div class="time-info">
+              <time class="time-text">9:41</time>
+            </div>
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3774cb614c9a36186fdfbb417ec2f6416423e5cfcc16996e1c1676142cb7bc27?apiKey=262c14b244ca4432a41d9d430d7880df&" alt="" />
+          </header>
+          <section class="notification-header">
+            <div class="notification-title-container">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a16c8ea7a5a978b1dcb68f11619f6afe7d9c59d9c128273e18de7568040719fe?apiKey=262c14b244ca4432a41d9d430d7880df&" class="notification-icon" alt="Notification icon" />
+              <h2 class="notification-title">Notification</h2>
+            </div>
+            <section class="notification-card">
+              <div class="card-content">
+                <header class="card-header">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/94f772b56bf5252dada36d023b8bdfcb4bf3c2604f41251406433da3e96dbec8?apiKey=262c14b244ca4432a41d9d430d7880df&" class="app-icon" alt="Application icon" />
+                  <h3 class="app-name">Application name</h3>
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d65aa61f2b56680b6df0f97a12a9132b1a88f284f13761d85e2b8478debd075f?apiKey=262c14b244ca4432a41d9d430d7880df&" class="dot-icon" alt="" />
+                  <time class="time-label">now</time>
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b923ea87353c8c48d26364f6076e4b6fe3cb47b415543d2ec51c884d1c7b2cce?apiKey=262c14b244ca4432a41d9d430d7880df&" class="right-arrow" alt="" />
+                </header>
+                <div class="card-body">
+                  <h4 class="body-title">Hi Anastassia!</h4>
+                  <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor.</p>
+                </div>
+              </div>
+            </section>
+            <section class="notification-card">
+              <div class="card-content">
+                <header class="card-header">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/94f772b56bf5252dada36d023b8bdfcb4bf3c2604f41251406433da3e96dbec8?apiKey=262c14b244ca4432a41d9d430d7880df&" class="app-icon" alt="Application icon" />
+                  <h3 class="app-name">Application name</h3>
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d65aa61f2b56680b6df0f97a12a9132b1a88f284f13761d85e2b8478debd075f?apiKey=262c14b244ca4432a41d9d430d7880df&" class="dot-icon" alt="" />
+                  <time class="time-label">now</time>
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/54afe2caff6772e1fcd77262007e92ffbac54757ede108de0d3edc7b50b79260?apiKey=262c14b244ca4432a41d9d430d7880df&" class="right-arrow" alt="" />
+                </header>
+                <div class="card-body">
+                  <h4 class="body-title">Hi Anastassia!</h4>
+                  <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor.</p>
+                </div>
+              </div>
+            </section>
+            <section class="notification-card">
+              <div class="card-content">
+                <header class="card-header">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/94f772b56bf5252dada36d023b8bdfcb4bf3c2604f41251406433da3e96dbec8?apiKey=262c14b244ca4432a41d9d430d7880df&" class="app-icon" alt="Application icon" />
+                  <h3 class="app-name">Application name</h3>
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d65aa61f2b56680b6df0f97a12a9132b1a88f284f13761d85e2b8478debd075f?apiKey=262c14b244ca4432a41d9d430d7880df&" class="dot-icon" alt="" />
+                  <time class="time-label">now</time>
+                </header>
+                <div class="card-body">
+                  <h4 class="body-title">Hi Anastassia!</h4>
+                </div>
+              </div>
+            </section>
+            <section class="notification-card">
+              <div class="card-content">
+                <header class="card-header">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/94f772b56bf5252dada36d023b8bdfcb4bf3c2604f41251406433da3e96dbec8?apiKey=262c14b244ca4432a41d9d430d7880df&" class="app-icon" alt="Application icon" />
+                  <h3 class="app-name">Application name</h3>
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d65aa61f2b56680b6df0f97a12a9132b1a88f284f13761d85e2b8478debd075f?apiKey=262c14b244ca4432a41d9d430d7880df&" class="dot-icon" alt="" />
+                  <time class="time-label">now</time>
+                </header>
+                <div class="card-body">
+                  <h4 class="body-title">Hi Anastassia!</h4>
+                  <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor.</p>
+                </div>
+              </div>
+            </section>
+          </section>
+          <footer class="main-footer">
+            <nav class="footer">
+              <div class="footer-nav">
+                <div class="nav-item">
+                  <a href="index.html">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1812a7a67fdb8599f6e5985af5b8da2b143251b6e0030116a3ccd59b16fc700f?apiKey=262c14b244ca4432a41d9d430d7880df&" class="nav-icon" alt="Home icon" />
+                    <span class="nav-title">Home</span>
+                  </a>
+                </div>
+                <div class="nav-item">
+                  <a href="search.html">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b96bcaf827af12f30606e9dfb33fdc641d5eda5b4e1e980fafaa9760e9bf130b?apiKey=262c14b244ca4432a41d9d430d7880df&" class="nav-icon" alt="Search icon" />
+                    <span class="nav-title">Search</span>
+                  </a>
+                </div>
+                <div class="nav-item">
+                  <a href="notification.html">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f347ef705a2548c75fe83c8cfb6964d8228914c78a5329f9549c2a96c638b846?apiKey=262c14b244ca4432a41d9d430d7880df&" class="nav-icon" alt="Notification icon" />
+                    <span class="nav-title">Notification</span>
+                  </a>
+                </div>
+                <div class="nav-item">
+                  <a href="profile.html">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9bc14101b5fa4d1d2d9943fe08a1a818927d5bae5085f3f23f4aa507b9dbc147?apiKey=262c14b244ca4432a41d9d430d7880df&" class="nav-icon" alt="Profile icon" />
+                    <span class="nav-title">Profile</span>
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </footer>
+        </section>
+</body>
+</html>

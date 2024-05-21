@@ -1,0 +1,228 @@
+<style>
+    .container {
+      background-color: var(--Background-Surface-Light, #fff);
+      display: flex;
+      max-width: 480px;
+      width: 100%;
+      flex-direction: column;
+      font-size: 16px;
+      margin: 0 auto;
+      padding: 80px 64px 64px;
+    }
+  
+    .welcome-title {
+      color: var(--basic-color, #186e9f);
+      font-feature-settings: "ss04" on;
+      letter-spacing: -0.48px;
+      margin-top: 48px;
+      font: 700 32px/60px Inter, sans-serif;
+    }
+  
+    .info-text {
+      color: var(--Text-Body-Lighter, #3b4752);
+      font-feature-settings: "salt" on;
+      margin-top: 12px;
+      font: 300 18px/28px Public Sans, -apple-system, Roboto, Helvetica, sans-serif;
+    }
+  
+    .input-label {
+      color: var(--Text-Input-Label, #222b33);
+      font-feature-settings: "salt" on;
+      font-family: Public Sans, sans-serif;
+      font-weight: 500;
+      line-height: 32px;
+      margin-top: 32px;
+    }
+  
+    .input-value {
+      font-feature-settings: "salt" on;
+      font-family: Public Sans, sans-serif;
+      border-radius: 2px;
+      border: 1px solid rgba(207, 216, 225, 1);
+      background-color: var(--Background-Input-Default, #f9fafb);
+      color: var(--Text-Input-Value, #3b4752);
+      font-weight: 340;
+      white-space: nowrap;
+      justify-content: center;
+      padding: 10px 12px;
+    }
+  
+    .password-section {
+      border-radius: 2px;
+      border: 1px solid rgba(207, 216, 225, 1);
+      background-color: var(--Background-Input-Default, #f9fafb);
+      display: flex;
+      gap: 8px;
+      color: var(--Text-Input-Value, #3b4752);
+      font-weight: 900;
+      white-space: nowrap;
+      letter-spacing: 0.56px;
+      padding: 8px 12px;
+    }
+  
+    .password-value {
+      font-feature-settings: "salt" on;
+      font-family: Public Sans, sans-serif;
+      flex: 1;
+      margin: auto 0;
+    }
+  
+    .input-img {
+      aspect-ratio: 1;
+      object-fit: auto;
+      object-position: center;
+      width: 24px;
+    }
+  
+    .options-container {
+      justify-content: end;
+      display: flex;
+      margin-top: 24px;
+      gap: 8px;
+      line-height: 150%;
+    }
+  
+    .checkbox-section {
+      display: flex;
+      gap: 8px;
+      color: var(--Text-Checkbox-Label, #222b33);
+      font-weight: 360;
+      flex: 1;
+    }
+  
+    .checkbox {
+      border-radius: 2px;
+      border: 1px solid rgba(166, 179, 192, 1);
+      background-color: var(--Background-Checkbox-Unchecked, #fcfdfd);
+      width: 24px;
+      height: 24px;
+    }
+  
+    .checkbox-label {
+      font-feature-settings: "salt" on;
+      font-family: Public Sans, sans-serif;
+      flex: 1;
+    }
+  
+    .forgot-password {
+      color: #000;
+      text-align: right;
+      font-feature-settings: "salt" on;
+      font-family: Public Sans, sans-serif;
+      font-weight: 500;
+      text-decoration-line: underline;
+    }
+  
+    .submit-button {
+      font-family: Sora Variable, sans-serif;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2px;
+      border: 1px solid rgba(0, 230, 135, 1);
+      background-color: var(--Background-Button-Primary, #50f89a);
+      margin-top: 32px;
+      color: var(--Text-Button-Primary, #005237);
+      font-weight: 460;
+      text-align: center;
+      line-height: 112.5%;
+      padding: 14px 12px;
+    }
+  
+    .google-signin {
+      justify-content: center;
+      border-radius: 2px;
+      border: 1px solid rgba(207, 216, 225, 1);
+      background-color: var(--Background-Button-Secondary, #fff);
+      display: flex;
+      margin-top: 12px;
+      gap: 10px;
+      color: var(--Text-Button-Secondary, #3b4752);
+      font-weight: 460;
+      text-align: center;
+      line-height: 112.5%;
+      padding: 14px 12px;
+    }
+  
+    .google-img {
+      aspect-ratio: 1;
+      object-fit: auto;
+      object-position: center;
+      width: 20px;
+    }
+  
+    .google-signin-text {
+      font-family: Sora Variable, sans-serif;
+    }
+  
+    .signup-text {
+      color: var(--Text-Body-Link, #11161b);
+      text-align: center;
+      font-feature-settings: "salt" on;
+      font-family: Public Sans, sans-serif;
+      font-weight: 300;
+      line-height: 28px;
+      text-decoration-line: underline;
+      margin-top: 24px;
+    }
+  
+    .bold {
+      font-weight: 500;
+    }
+  
+    .underlined {
+      text-decoration: underline;
+      color: rgba(17, 22, 27, 1);
+    }
+  
+    .visually-hidden {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    a{
+   text-decoration: none;
+   font: 600 14px/143% Inter, sans-serif;
+   color: #fff;
+}
+  </style>
+  
+  <section class="container">
+    <h2 class="welcome-title">Welcome back</h2>
+    <p class="info-text">You need to be signed in to access the project dashboard.</p>
+    
+    <form>
+      <label for="username" class="input-label">Email or username</label>
+      <input class="input-value" type="text" id="username" value="khaulanauman@example.com" aria-label="Email or username"/>
+  
+      <label for="password" class="input-label">Password</label>
+      <div class="password-section">
+        <input class="password-value" type="password" id="password" value="••••••••••" aria-label="Password"/>
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2c1eec7d41001db9d726e0b4ea1ccc34cf9379452f4bb2d761394bd418f1c27?apiKey=3198f21feb7041f1afab90cafa57c110&" alt="" class="input-img"/>
+      </div>
+  
+      <div class="options-container">
+        <div class="checkbox-section">
+          <input type="checkbox" id="keep-signed-in" class="checkbox"/>
+          <label for="keep-signed-in" class="checkbox-label">Keep me signed in</label>
+        </div>
+        <a href="#" class="forgot-password">Forgot password?</a>
+      </div>
+  
+      <button type="submit" class="submit-button"><a href="otp.html">Sign in</a></button>
+    </form>
+  
+    <div class="google-signin" tabindex="0" role="button">
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ab283033c6313d462a70bc2bb44ba94471e3f28b0abeb8fccb6a98d54f0b5dfd?apiKey=3198f21feb7041f1afab90cafa57c110&" alt="Google Sign-In" class="google-img"/>
+      <div class="google-signin-text">Sign in with Google</div>
+    </div>
+  
+    <p class="signup-text">
+      <span>Haven’t joined yet?</span>
+      <a href="#" class="underlined">Sign in</a>
+    </p>
+  </section>

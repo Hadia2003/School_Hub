@@ -1,0 +1,371 @@
+<style>
+    .container {
+      background-color: #fff;
+      display: flex;
+      max-width: 480px;
+      width: 100%;
+      flex-direction: column;
+      margin: 0 auto;
+    }
+    
+    .header {
+      justify-content: center;
+      display: flex;
+      width: 100%;
+      gap: 20px;
+      font-size: 17px;
+      color: #000;
+      font-weight: 600;
+      white-space: nowrap;
+      letter-spacing: -0.68px;
+      padding: 0 12px;
+    }
+    
+    .time-display {
+      font-family: SF Pro Text, sans-serif;
+      justify-content: center;
+      flex: 1;
+      padding: 16px 22px 8px;
+    }
+    
+    .battery-icon {
+      aspect-ratio: 1.79;
+      object-fit: auto;
+      object-position: center;
+      width: 100%;
+      flex: 1;
+    }
+    
+    .otp-section {
+      display: flex;
+      margin-top: 26px;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 15px;
+    }
+    
+    .otp-info {
+      justify-content: center;
+      align-self: stretch;
+      display: flex;
+      width: 100%;
+      padding-right: 80px;
+      gap: 20px;
+    }
+    
+    .signal-icon {
+      aspect-ratio: 0.6;
+      object-fit: auto;
+      object-position: center;
+      width: 12px;
+    }
+    
+    .otp-progress-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto 0;
+    }
+    
+    .otp-progress-bar {
+      border-radius: 20px;
+      background-color: #e0dff1;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      padding: 0 35px;
+    }
+    
+    .otp-progress-fill {
+      border-radius: 20px;
+      background-color: #186e9f;
+      height: 12px;
+    }
+    
+    .otp-title {
+      color: #186e9f;
+      margin-top: 84px;
+      font: 700 16px Inter, sans-serif;
+    }
+    
+    .otp-desc {
+      text-align: center;
+      margin-top: 26px;
+      font: 400 14px/21px Inter, sans-serif;
+    }
+    
+    .otp-desc span {
+      font-style: bold;
+    }
+    
+    .otp-inputs {
+      display: flex;
+      margin-top: 30px;
+      gap: 20px;
+      font-size: 32px;
+      color: #000;
+      font-weight: 800;
+      white-space: nowrap;
+      justify-content: space-between;
+    }
+    
+    .otp-input {
+      font-family: Inter, sans-serif;
+    }
+    
+    .otp-dot {
+      background-color: #e0dff1;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      margin: auto 0;
+    }
+    
+    .otp-resend {
+      color: #000;
+      text-align: center;
+      margin-top: 34px;
+      font: 400 14px/136% Inter, sans-serif;
+    }
+    
+    .submit-button {
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background-color: #186e9f;
+      align-self: stretch;
+      margin-top: 85px;
+      color: var(--bwb-0, #fff);
+      white-space: nowrap;
+      padding: 16px;
+      font: 600 14px/143% Inter, sans-serif;
+    }
+    
+    .keyboard {
+      backdrop-filter: blur(27px);
+      background-color: var(--iOS-Keyboard-Background, rgba(197, 201, 208, 0.9));
+      display: flex;
+      margin-top: 34px;
+      width: 100%;
+      flex-direction: column;
+      color: var(--iOS-Key-Label, #000);
+      text-align: center;
+    }
+    
+    .keyboard-header {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      gap: 0px;
+      font-weight: 400;
+      padding: 0 44px;
+    }
+    
+    .keyboard-separator {
+      background-color: var(--iOS-Key-Label, #000);
+      align-self: stretch;
+      width: 1px;
+      height: 25px;
+      margin: auto 0;
+    }
+    
+    .keyboard-label-container {
+      justify-content: center;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 8px 0;
+    }
+    
+    .keyboard-label {
+      font: 12px SF Pro Text, sans-serif;
+    }
+    
+    .keyboard-code {
+      font: 16px SF Pro Text, sans-serif;
+    }
+    
+    .keyboard-numbers {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      text-transform: uppercase;
+      padding: 4px 6px;
+    }
+    
+    .keyboard-row {
+      display: flex;
+      gap: 6px;
+      padding: 0 1px;
+    }
+    
+    .key {
+      justify-content: center;
+      align-items: start;
+      border-radius: 5px;
+      box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
+      background-color: var(--iOS-Key-Background-Highlight, #fff);
+      white-space: nowrap;
+      flex: 1;
+      padding: 8px 57px 22px;
+      font: 400 24px SF Pro Text, sans-serif;
+    }
+    
+    .key-container {
+      justify-content: center;
+      border-radius: 5px;
+      box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
+      background-color: var(--iOS-Key-Background-Highlight, #fff);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 7px 48px;
+    }
+    
+    .key-label {
+      font: 400 24px SF Pro Text, sans-serif;
+    }
+    
+    .key-sub-label {
+      margin-top: 9px;
+      font: 800 10px SF Pro Text, sans-serif;
+    }
+    
+    .key-zero {
+      font-family: SF Pro Text, sans-serif;
+      justify-content: center;
+      border-radius: 5px;
+      box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.3);
+      background-color: var(--iOS-Key-Background-Highlight, #fff);
+      flex: 1;
+      padding: 15px 55px;
+    }
+    
+    .mic-icon {
+      aspect-ratio: 2.56;
+      object-fit: auto;
+      object-position: center;
+      width: 100%;
+      flex: 1;
+    }
+    
+    .alt-text {
+      line-height: 20px;
+      color: rgba(113, 111, 111, 1);
+    }
+    
+    .bold-text {
+      font-weight: 700;
+    }
+  
+    .otp-resend-link {
+      color: rgba(94, 91, 91, 1);
+    }
+    a{
+   text-decoration: none;
+   font: 600 14px/143% Inter, sans-serif;
+   color: #fff;
+}
+  </style>
+  
+  <div class="container">
+    <header class="header">
+      <div class="time-display">9:41</div>
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/84a6bdfc4bf85367f70d356c7d0e114c8a0d85ea9c2204308e9637d9a997c042?apiKey=6cac3cf2efeb48c0aea804fa0ce50edb&" class="battery-icon" alt="Battery Icon" />
+    </header>
+  
+    <section class="otp-section">
+      <div class="otp-info">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/eeab5084de91d12d9009cfa59ebd76bc48a8c83fa69ce1999456ae9720a5d1a0?apiKey=6cac3cf2efeb48c0aea804fa0ce50edb&" class="signal-icon" alt="Signal Icon" />
+        
+        <div class="otp-progress-container">
+          <div class="otp-progress-bar">
+            <div class="otp-progress-fill"></div>
+          </div>
+        </div>
+      </div>
+      
+      <h2 class="otp-title">Enter OTP CODE</h2>
+  
+      <p class="otp-desc">
+        <span class="alt-text">Hey! Enter the one time password send to you by Sms on your given number </span>
+        <span class="bold-text">+9281216580762</span>
+      </p>
+  
+      <div class="otp-inputs">
+        <div class="otp-input">0</div>
+        <div class="otp-input">5</div>
+        <div class="otp-dot"></div>
+        <div class="otp-dot"></div>
+      </div>
+  
+      <p class="otp-resend">
+        <span class="otp-resend-link">OTP not received?</span> Send Again
+      </p>
+  
+      <button class="submit-button"><a href="success.html">Submit</a></button>
+    </section>
+  
+    <section class="keyboard">
+      <div class="keyboard-header">
+        <div class="keyboard-separator"></div>
+        <div class="keyboard-label-container">
+          <div class="keyboard-label">From Messages</div>
+          <div class="keyboard-code">050518</div>
+        </div>
+        <div class="keyboard-separator"></div>
+      </div>
+  
+      <div class="keyboard-numbers">
+        <div class="keyboard-row">
+          <div class="key">1</div>
+          <div class="key-container">
+            <div class="key-label">2</div>
+            <div class="key-sub-label">A B C</div>
+          </div>
+          <div class="key-container">
+            <div class="key-label">3</div>
+            <div class="key-sub-label">D E F</div>
+          </div>
+        </div>
+  
+        <div class="keyboard-row">
+          <div class="key-container">
+            <div class="key-label">4</div>
+            <div class="key-sub-label">G H I</div>
+          </div>
+          <div class="key-container">
+            <div class="key-label">5</div>
+            <div class="key-sub-label">J K L</div>
+          </div>
+          <div class="key-container">
+            <div class="key-label">6</div>
+            <div class="key-sub-label">M N O</div>
+          </div>
+        </div>
+  
+        <div class="keyboard-row">
+          <div class="key-container">
+            <div class="key-label">7</div>
+            <div class="key-sub-label">P Q R S</div>
+          </div>
+          <div class="key-container">
+            <div class="key-label">8</div>
+            <div class="key-sub-label">T U V</div>
+          </div>
+          <div class="key-container">
+            <div class="key-label">9</div>
+            <div class="key-sub-label">W X Y Z</div>
+          </div>
+        </div>
+  
+        <div class="keyboard-row">
+          <div class="key-zero">0</div>
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/24a304501399ca2eb226c0840cd38550321862205caf4e9d86a230ff51987b52?apiKey=6cac3cf2efeb48c0aea804fa0ce50edb&" class="mic-icon" alt="Mic Icon" />
+        </div>
+      </div>
+    </section>
+  </div>
